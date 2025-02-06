@@ -34,10 +34,29 @@ public class JackAshScrapsNShit : BaseUnityPlugin
             return;
         }
 
-        int rarity = 80;
+        int rarity = 5;
         Item giantGummyBear = JackAshScrapsNShitBundle.LoadAsset<Item>("Assets/GiantGummyBear.asset");
+        Utilities.FixMixerGroups(giantGummyBear.spawnPrefab);
         NetworkPrefabs.RegisterNetworkPrefab(giantGummyBear.spawnPrefab);
         Items.RegisterScrap(giantGummyBear, rarity, Levels.LevelTypes.All);
+        
+        rarity = 10;
+        Item metalChair = JackAshScrapsNShitBundle.LoadAsset<Item>("Assets/MetalChair.asset");
+        Utilities.FixMixerGroups(metalChair.spawnPrefab);
+        NetworkPrefabs.RegisterNetworkPrefab(metalChair.spawnPrefab);
+        Items.RegisterScrap(metalChair, rarity, Levels.LevelTypes.All);
+        
+        rarity = 7;
+        Item glasses = JackAshScrapsNShitBundle.LoadAsset<Item>("Assets/Glasses.asset");
+        Utilities.FixMixerGroups(glasses.spawnPrefab);
+        NetworkPrefabs.RegisterNetworkPrefab(glasses.spawnPrefab);
+        Items.RegisterScrap(glasses, rarity, Levels.LevelTypes.All);
+        
+        rarity = 9;
+        Item trafficCone = JackAshScrapsNShitBundle.LoadAsset<Item>("Assets/TrafficCone.asset");
+        Utilities.FixMixerGroups(trafficCone.spawnPrefab);
+        NetworkPrefabs.RegisterNetworkPrefab(trafficCone.spawnPrefab);
+        Items.RegisterScrap(trafficCone, rarity, Levels.LevelTypes.All);
         
         Patch();
 
